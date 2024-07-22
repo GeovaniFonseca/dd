@@ -328,10 +328,10 @@ class DiscordBridgeBot(commands.Bot):
                         return
                     if " joined." in message:
                         embed = Embed(timestamp=discord.utils.utcnow(), colour=0x56F98A)
-                        embed.set_author(name=message, icon_url="https://www.mc-heads.net/avatar/" + playername)
+                        embed.set_author(name=message, icon_url="https://www.mc-heads.net/avatar/" + memberusername)
                     else:
                         embed = Embed(timestamp=discord.utils.utcnow(), colour=0xFF6347)
-                        embed.set_author(name=message, icon_url="https://www.mc-heads.net/avatar/" + playername)
+                        embed.set_author(name=message, icon_url="https://www.mc-heads.net/avatar/" + memberusername)
                     await self.send_debug_message("Sending player joined message")
                     await self.send_message(embed=embed)
                 else:
